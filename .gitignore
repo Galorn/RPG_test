@@ -45,3 +45,7 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.layout
+RPG_test.depend
+*.cbp
+obj/Debug/main.o
