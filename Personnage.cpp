@@ -6,7 +6,7 @@ Personnage::Personnage() : m_vie(100), m_mana(100)
 
 }
 
-Personnage::Personnage(string nomArme, int degatsArme) : m_vie(100), m_mana(100), m_arme(nomArme, degatsArme)
+Personnage::Personnage(string nom, string nomArme, int degatsArme) : m_nom(nom), m_vie(100), m_mana(100), m_arme(nomArme, degatsArme)
 {
 
 }
@@ -60,6 +60,7 @@ bool Personnage::estVivant()
 
 void Personnage::afficherEtat()
 {
+    cout << "Nom : " << m_nom << endl;
     cout << "Vie : " << m_vie << endl;
     cout << "Mana : " << m_mana << endl;
     m_arme.afficher();

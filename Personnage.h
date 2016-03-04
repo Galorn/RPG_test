@@ -10,7 +10,7 @@ class Personnage
     public:
 
     Personnage();
-    Personnage(std::string nomArme, int degatsArme);
+    Personnage(std::string nom, std::string nomArme, int degatsArme);
     ~Personnage();
     void recevoirDegats(int nbDegats);
     void attaquer(Personnage &cible);
@@ -24,6 +24,7 @@ class Personnage
     int m_vie;
     int m_mana;
     Arme m_arme;
+    std::string m_nom;
 };
 
 #endif

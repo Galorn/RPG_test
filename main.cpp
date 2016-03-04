@@ -8,21 +8,21 @@ int main()
 {
 
     // Création des personnages
-    Personnage david, goliath("Epée aiguisée", 20);
+    Personnage deuxiemeperso ("Jacques", "son poing", 10),premierperso("Paul", "Epée aiguisée", 20);
 
     // Au combat !
-    goliath.attaquer(david);
-    david.boirePotionDeVie(20);
-    goliath.attaquer(david);
-    david.attaquer(goliath);
-    goliath.changerArme("Double hache tranchante vénéneuse de la mort", 40);
-    goliath.attaquer(david);
+    premierperso.attaquer(deuxiemeperso);
+    deuxiemeperso.boirePotionDeVie(20);
+    premierperso.attaquer(deuxiemeperso);
+    deuxiemeperso.attaquer(premierperso);
+    premierperso.changerArme("Double hache tranchante vénéneuse de la mort", 40);
+    deuxiemeperso.attaquer(premierperso);
 
     // Temps mort ! Voyons voir la vie de chacun...
     cout << "David" << endl;
-    david.afficherEtat();
+    premierperso.afficherEtat();
     cout << endl << "Goliath" << endl;
-    goliath.afficherEtat();
+    deuxiemeperso.afficherEtat();
 
     return 0;
 }
