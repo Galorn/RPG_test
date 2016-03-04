@@ -1,7 +1,6 @@
 #include "Personnage.h"
 using namespace std;
 
-
 Personnage::Personnage() : m_vie(100), m_mana(100)
 {
 

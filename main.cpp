@@ -4,9 +4,9 @@
 
 using namespace std;
 
-
 int main()
 {
+
     // Création des personnages
     Personnage david, goliath("Epée aiguisée", 20);
 

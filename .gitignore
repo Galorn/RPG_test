@@ -49,3 +49,4 @@ Temporary Items
 RPG_test.depend
 
 obj/Debug/main.o
+*.o
