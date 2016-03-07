@@ -27,3 +27,8 @@ int Arme::getDegats() const
 {
     return m_degats;
 }
+
+std::string Arme::getArmeName()
+{
+    return m_nom;
+}
