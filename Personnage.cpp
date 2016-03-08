@@ -23,15 +23,14 @@ void Personnage::recevoirDegats(int nbDegats)
     if (m_vie < 0)
     {
         m_vie = 0;
-        cout << "Rekt !" << endl;
+        cout << endl << "Rekt ! " << m_nom << " est mort ! " << endl;
     }
 }
 
 void Personnage::attaquer(Personnage &cible)
 {
-    cible.recevoirDegats(m_arme.getDegats());
     cout << "Le personnage " << m_nom << " attaque à " << m_arme.getDegats() << " dommages le personnage " << cible.getPersonnageName() << " ." <<endl;
-    // cout << m_nom << " attaque " << cible << endl;
+    cible.recevoirDegats(m_arme.getDegats());
 }
 
 void Personnage::boirePotionDeVie(int quantitePotion)
@@ -48,7 +47,7 @@ void Personnage::boirePotionDeVie(int quantitePotion)
 void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
 {
     m_arme.changer(nomNouvelleArme, degatsNouvelleArme);
-    cout << "SWITCHeuh" << endl;
+    cout << endl << "SWITCHeuh" << endl;
 }
 
 bool Personnage::estVivant()

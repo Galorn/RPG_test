@@ -20,6 +20,11 @@ int main()
     // ACCUEIL
     cout << "BIENVENUE SUR LE SIMULATEUR DE COMBAT BIG BOSS vs COOP ! " << endl << "LET'S FUCKING BEGIN" << endl << "Voulez vous jouer ?" << endl << "OUI ou NON " << endl ;
     cin >> jouer;
+    while (jouer.compare("OUI")!= 0 && jouer.compare ("NON")!=0)
+    {
+        cout << endl << "Tu sais pas ecrire ?" << endl << "Tu veux jouer ? OUI ou NON " << endl ;
+        cin >> jouer;
+    }
     while (jouer.compare("OUI")== 0)
     {
 
@@ -227,11 +232,24 @@ int main()
 
 
         }
+            // ETAT FINAL
+            cout << endl << "UN MORT " << endl << "ETAT EN FIN DE COMBAT " << endl << nomUn << endl;
+            premierPerso.afficherEtat();
+            cout << endl << nomDeux << endl;
+            deuxiemePerso.afficherEtat();
+            cout << endl << personnageNonJoueur.getPersonnageName() << endl;
+            personnageNonJoueur.afficherEtat();
 
         cout << endl << "Voulez vous recommencer ?" << endl << " OUI ou NON " << endl;
         cin >> jouer;
+        while (jouer.compare("OUI")!= 0 && jouer.compare ("NON")!=0)
+    {
+        cout << endl << "Tu sais pas ecrire ?" << endl << "Tu veux jouer ? OUI ou NON " << endl ;
+        cin >> jouer;
     }
 
+    }
+    cout << endl << "CIAO !" << endl;
         return 0;
 
 }
