@@ -23,12 +23,15 @@ void Personnage::recevoirDegats(int nbDegats)
     if (m_vie < 0)
     {
         m_vie = 0;
+        cout << "Rekt !" << endl;
     }
 }
 
 void Personnage::attaquer(Personnage &cible)
 {
     cible.recevoirDegats(m_arme.getDegats());
+    cout << "Le personnage " << m_nom << " attaque à " << m_arme.getDegats() << " dommages le personnage " << cible.getPersonnageName() << " ." <<endl;
+    // cout << m_nom << " attaque " << cible << endl;
 }
 
 void Personnage::boirePotionDeVie(int quantitePotion)
@@ -38,12 +41,14 @@ void Personnage::boirePotionDeVie(int quantitePotion)
     if (m_vie > 100)
     {
         m_vie = 100;
+        cout << "Full life baby !" << endl ;
     }
 }
 
 void Personnage::changerArme(string nomNouvelleArme, int degatsNouvelleArme)
 {
     m_arme.changer(nomNouvelleArme, degatsNouvelleArme);
+    cout << "SWITCHeuh" << endl;
 }
 
 bool Personnage::estVivant()
@@ -60,8 +65,28 @@ bool Personnage::estVivant()
 
 void Personnage::afficherEtat()
 {
+
     cout << "Nom : " << m_nom << endl;
     cout << "Vie : " << m_vie << endl;
     cout << "Mana : " << m_mana << endl;
     m_arme.afficher();
 }
+
+std::string Personnage::getPersonnageName()
+{
+    return m_nom;
+}
+
+int Personnage::getPersonnageHealth()
+{
+    return m_vie;
+}
+
+void Personnage::magie(Personnage &cible)
+{
+    // SPELL DE BASE 10 DGTS MAGIQUES
+    cible.recevoirDegats(10);
+    cout << "Le personnage " << m_nom << " lance une attaque magique a " << 10 << " dommages sur le personnage " << cible.getPersonnageName() << " ." <<endl;
+
+}
+

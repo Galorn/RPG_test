@@ -18,7 +18,9 @@ class Personnage
     void changerArme(std::string nomNouvelleArme, int degatsNouvelleArme);
     bool estVivant();
     void afficherEtat();
-
+    std::string getPersonnageName();
+    int getPersonnageHealth();
+    void magie(Personnage &cible);
     private:
 
     int m_vie;
